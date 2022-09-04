@@ -1,0 +1,20 @@
+import Aggregate from './__TEMPLATE__FILE__NAME__';
+import { IHandle, IDomainEvent } from 'types-ddd';
+
+export class {{__TEMPLATE__CLASS__NAME__}}CreatedEvent implements IHandle<Aggregate>{
+	public eventName: string;
+
+	constructor() { 
+		this.eventName = '{{__TEMPLATE__CLASS__NAME__}}EvenCreated';
+	}
+	
+	async dispatch(event: IDomainEvent<Aggregate>): Promise<void> {
+		const { aggregate } = event;
+		
+		// your code here
+
+		console.log('EVENT DISPATCH ...');
+	}
+}
+
+export default {{__TEMPLATE__CLASS__NAME__}}CreatedEvent;

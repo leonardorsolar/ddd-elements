@@ -1,0 +1,15 @@
+import { ICommand, Result } from 'types-ddd';
+
+export interface Dto {
+	data: string;
+}
+
+export class {{__TEMPLATE__CLASS__NAME__}}Command implements ICommand<Dto, Result<void>> {
+	execute(dto: Dto): Result<void> {
+
+		// your code
+		return Result.Ok();
+	}
+}
+
+export default {{__TEMPLATE__CLASS__NAME__}}Command;

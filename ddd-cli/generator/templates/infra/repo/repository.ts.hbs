@@ -1,0 +1,28 @@
+import { UID } from 'types-ddd';
+import RepoInterface from '@modules/{{dashCase moduleName}}/domain/interfaces/repository.interface';
+import Model from '@modules/{{dashCase moduleName}}/domain/interfaces/model.interface';
+import Aggregate from '@modules/{{dashCase moduleName}}/domain/aggregate';
+
+export class {{pascalCase className}}Repository implements RepoInterface {
+	create(aggregate: Aggregate): Promise<void> {
+		throw new Error('Method not implemented');
+	};
+
+	update(aggregate: Aggregate): Promise<void> {
+		throw new Error('Method not implemented');
+	};
+
+	findById(id: UID): Promise<Aggregate | null> {
+		throw new Error('Method not implemented');
+	};
+
+	deleteById(id: UID): Promise<void> {
+		throw new Error('Method not implemented');
+	};
+
+	findMany(attributes: Partial<Model>): Promise<Model[]> {
+		throw new Error('Method not implemented');
+	};
+}
+
+export default {{pascalCase className}}Repository;

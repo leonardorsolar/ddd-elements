@@ -1,0 +1,22 @@
+import { IUseCase, Result } from 'types-ddd';
+import {{pascalCase className}}Repo from '@modules/{{dashCase moduleName}}/domain/interfaces/repository.interface';
+
+export interface UseCaseDto {
+	data: string;
+}
+
+export class {{pascalCase className}}UseCase implements IUseCase<UseCaseDto, Result<void>> {
+	constructor(private readonly repo: {{pascalCase className}}Repo){}
+	async execute(dto: UseCaseDto): Promise<Result<void>> {
+		try {
+
+			// your code ...
+
+			return Result.Ok();
+		} catch (error: any) {
+			return Result.fail(error.message);
+		}
+	}
+}
+
+export default {{pascalCase className}}UseCase;

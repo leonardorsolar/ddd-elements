@@ -1,0 +1,19 @@
+import { Entity, Result, UID } from 'types-ddd';
+
+export interface Props {
+	id?: UID;
+	keyA: string;
+	keyB: number;
+}
+
+export class {{pascalCase className}}Entity extends Entity<Props> {
+	private constructor(props: Props){
+		super(props);
+	}
+
+	public static create(props: Props): Result<{{pascalCase className}}Entity> {
+		return Result.Ok(new {{pascalCase className}}Entity(props));
+	}
+}
+
+export default {{pascalCase className}}Entity;

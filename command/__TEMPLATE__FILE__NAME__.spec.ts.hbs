@@ -1,0 +1,14 @@
+import Command from './__TEMPLATE__FILE__NAME__';
+
+describe('use-case', () => {
+	
+	const command = new Command();
+
+	describe('success commands', () => {
+		it('should return ok', () => {
+			const result = command.execute({ data: 'ok' });
+			expect(result.isOk()).toBeTruthy();
+		});
+	});
+
+});

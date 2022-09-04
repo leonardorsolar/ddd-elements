@@ -1,0 +1,11 @@
+import Model from '@modules/{{dashCase moduleName}}/domain/interfaces/model.interface';
+
+export class {{pascalCase className}}Model implements Model {
+	id!: string;
+	keyA!: string;
+	keyB!: number;
+	createdAt!: Date;
+	updatedAt!: Date;
+}
+
+export default {{pascalCase className}}Model;

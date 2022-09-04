@@ -1,0 +1,22 @@
+import Adapter from '@modules/{{dashCase moduleName}}/domain/adapters/adapter';
+import modelMock from '@modules/{{dashCase moduleName}}/domain/mock/model.mock';
+
+describe('adapter', () => {
+	
+	const adapter = new Adapter();
+
+	describe('success cases', () => {
+		it('should build method to be defined', () => {
+			const method = adapter.build;
+			expect(method).toBeDefined();
+		});
+	});
+
+	describe('failure cases', () => {
+		it('should fail if method is not implemented', () => {
+			const result = adapter.build(modelMock);
+			expect(result.isFail()).toBeTruthy();
+		});
+	});
+
+});

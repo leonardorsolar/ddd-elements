@@ -1,0 +1,19 @@
+import { Aggregate, Result, UID } from 'types-ddd';
+
+export interface Props {
+	id?: UID;
+	keyA: string;
+	keyB: number;
+}
+
+export class {{pascalCase className}}Aggregate extends Aggregate<Props> {
+	private constructor(props: Props){
+		super(props);
+	}
+
+	public static create(props: Props): Result<{{pascalCase className}}Aggregate> {
+		return Result.Ok(new {{pascalCase className}}Aggregate(props));
+	}
+}
+
+export default {{pascalCase className}}Aggregate;
